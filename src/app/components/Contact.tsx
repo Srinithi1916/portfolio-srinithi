@@ -146,7 +146,7 @@ export function Contact() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      link: "https://www.linkedin.com/in/srinithi-t-a",
+      link: "https://www.linkedin.com/in/srinithi-t-a-82a904255/",
       color: "hover:text-blue-400",
     },
     {

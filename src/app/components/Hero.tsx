@@ -10,7 +10,7 @@ const socialLinks = [
   },
   {
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/srinithi-t-a",
+    href: "https://www.linkedin.com/in/srinithi-t-a-82a904255/",
     label: "LinkedIn",
   },
   {
