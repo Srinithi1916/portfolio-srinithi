@@ -15,9 +15,12 @@ import type { ChangeEvent, FormEvent } from "react";
 
 const contactEmail =
   import.meta.env.VITE_CONTACT_EMAIL ?? "srinithisrinithi09@gmail.com";
-const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID?.trim();
-const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID?.trim();
-const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY?.trim();
+const emailJsServiceId =
+  import.meta.env.VITE_EMAILJS_SERVICE_ID?.trim() || "service_8eusket";
+const emailJsTemplateId =
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID?.trim() || "template_j5u3qpy";
+const emailJsPublicKey =
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY?.trim() || "Lq-b9zkDDo2as94ms";
 const emailJsEndpoint = "https://api.emailjs.com/api/v1.0/email/send";
 
 type SubmitStatus = "idle" | "success" | "error";
@@ -48,12 +51,6 @@ export function Contact() {
   };
 
   const sendMessageWithEmailJs = async () => {
-    if (!emailJsServiceId || !emailJsTemplateId || !emailJsPublicKey) {
-      throw new Error(
-        "EmailJS is not configured. Add the VITE_EMAILJS_* values in .env and restart the app."
-      );
-    }
-
     const response = await fetch(emailJsEndpoint, {
       method: "POST",
       headers: {
